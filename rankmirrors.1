@@ -1,0 +1,35 @@
+.TH rankmirrors GNU
+.SH NAME
+rankmirrors \- Read a list of archlinux mirrors from a file and rank them by speed.
+.SH DESCRIPTION
+rankmirrors is a simple bash script that rank mirrors by their connection and opening speed. It is a fork of bruenig's rankmirrors. Pacman mirror files are located in /etc/pacman.d/. It can also rank one mirror if the URL is provided.
+.SH DEPENDENCIES
+.B bash, pacman
+.SH USAGE
+Examples:
+.TP
+    rankmirrors -n 10 /etc/pacman.d/mirrorlist
+.TP
+    rankmirrors -v -u 'https://mirror.23m.com/archlinux/$repo/os/$arch'
+.SH OPTIONS
+.TP
+.B --version
+show program's version number and exit
+.TP
+.B -h, --help
+show this help message and exit
+.TP
+.B -n <NUM>
+number of servers to output, 0 for all
+.TP
+.B -t, --times
+only output mirrors and their response times
+.TP
+.B -u, --url
+test a specific url
+.TP
+.B -v, --verbose
+be verbose in ouptut
+.SH ISSUE AND BUGS
+Report all the issues, bugs, feature requests and bugfixings to https://www.github.com/whoisYoges/rankmirrors/issues.
+
