@@ -48,7 +48,7 @@ ARCH="$(uname -m)"
 getfetchurl() {
 	local strippedurl="${1%/}"
 
-	local replacedurl="${strippedurl//'$repo'/core}"
+	local replacedurl="${strippedurl//'$repo'/system}"
 	replacedurl="${replacedurl//'$arch'/$ARCH}"
 
 	local tmp="${replacedurl%/*}"
